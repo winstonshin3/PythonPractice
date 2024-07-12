@@ -45,6 +45,8 @@ class WarehouseRobot:
         elif robot_action == RobotAction.DOWN:
             if self.robot_pos[0] < self.grid_rows - 1:
                 self.robot_pos[0] += 1
+        
+        return self.robot_pos == self.target_pos
             
     def render(self):
         for r in range(self.grid_rows):
